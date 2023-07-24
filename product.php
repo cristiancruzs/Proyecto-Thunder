@@ -45,17 +45,17 @@
                 <td class="text-center"> <?php echo remove_junk($product['serial']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['mac']); ?></td>
                 <td class="text-center"> <?php echo read_date($product['created_at']); ?></td>
+                <td class="text-center">
+                  <div class="btn-group">
+                    <a href="edit_product.php?id=<?php echo (int)$product['id'];?>" class="btn btn-info btn-xs"  title="Editar" data-toggle="tooltip">
+                      <span class="glyphicon glyphicon-edit"></span>
+                    <a>
+                    <a href="delete_product.php?id=<?php echo (int)$product['id'];?>" class="btn btn-danger btn-xs"  title="Eliminar" data-toggle="tooltip">
+                      <span class="glyphicon glyphicon-trash"></span>
+                    <a>
+                  </div>
+               </td>
               </tr>
-                   <td class="text-center">
-                      <div class="btn-group">
-                         <a href="edit_product.php?id=<?php echo (int)$product['id'];?>" class="btn btn-info btn-xs"  title="Editar" data-toggle="tooltip">
-                           <span class="glyphicon glyphicon-edit"></span>
-                        </a>
-                        <a href="delete_product.php?id=<?php echo (int)$product['id'];?>" class="btn btn-danger btn-xs"  title="Eliminar" data-toggle="tooltip">
-                          <span class="glyphicon glyphicon-trash"></span>
-                        </a>
-                      </div>
-                  </td>
              <?php endforeach; ?>
             </tbody>
           </tabel>
