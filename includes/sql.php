@@ -212,7 +212,7 @@ function tableExists($table){
   function join_product_table(){
     // SELECT client_name, products.name,categories.name as model, serial, mac, created_at from products INNER JOIN categories ON products.categorie_id=categories.id;
      global $db;
-     $sql = "SELECT products.id, client_name, products.name,categories.name as model, serial, mac, created_at from products";
+     $sql = "SELECT products.id, products.client_name, products.name,categories.name as model, serial, mac, created_at from products";
      $sql .= " INNER JOIN categories ";
      $sql .= " ON products.categorie_id=categories.id";
     // $sql  =" SELECT p.id,p.name,p.quantity,p.media_id,p.date,p.serial,p.mac,c.name";
