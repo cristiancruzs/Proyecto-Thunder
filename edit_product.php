@@ -46,11 +46,11 @@ if(isset($_POST['edit-product'])){
 ?>
 
 <?php include_once('layouts/header.php'); ?>
-<div class="row">
-  <div class="col-md-12">
-    <?php echo display_msg($msg); ?>
+  <div class="row">
+        <div class="col-md-12">
+          <?php echo display_msg($msg); ?>
+        </div>
   </div>
-</div>
   <div class="row">
       <div class="panel panel-default">
         <div class="panel-heading">
@@ -146,7 +146,9 @@ if(isset($_POST['edit-product'])){
                </div>
               </div>
               <!-- Button -->
+              <div class= "d-flex justify-content-center" >
               <button type="submit" name="edit-product" class="btn btn-danger">Actualizar</button>
+              </div> 
           </form>
          </div>
         </div>

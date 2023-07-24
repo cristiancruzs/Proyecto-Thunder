@@ -5,6 +5,18 @@
  /* Function for Remove escapes special
  /* characters in a string for use in an SQL statement
  /*--------------------------------------------------------------*/
+ function find_by_field($table, $field, $value) {
+  global $db;
+  if(tableExists($table))
+  {
+    $sql    = "SELECT * FROM ".$db->escape($table);
+    $sql   .= " WHERE ".$db->escape($field);
+    $sql   .= " = '".$db->escape($value)."'";
+    $result = $db->query($sql);
+    if($result->num_rows === 0) return false; // Si no hay filas, devuelve false
+    return $result->fetch_assoc(); // Devuelve la primera fila que cumpla la condición
+  }
+}
 function real_escape($str){
   global $con;
   $escape = mysqli_real_escape_string($con,$str);

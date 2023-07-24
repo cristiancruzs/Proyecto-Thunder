@@ -89,8 +89,11 @@
                         </a>
                         <a href="delete_categorie.php?id=<?php echo (int)$cat['id'];?>"  class="btn btn-xs btn-danger" data-toggle="tooltip" title="Borrar">
                           <span class="glyphicon glyphicon-trash"></span>
+                          
                         </a>
+                        
                       </div>
+                      
                     </td>
 
                 </tr>
